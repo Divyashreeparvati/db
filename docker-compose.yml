@@ -10,7 +10,7 @@ services:
     volumes:
       - ./db-data/catalog_db_server/:/var/lib/postgresql/data
     ports:
-      - "5432:5432"
+      - "5433:5432"
     deploy:
       mode: replicated
       replicas: 1 
@@ -19,12 +19,12 @@ services:
     image: postgres:14
     environment:
       POSTGRES_USER: order_db
-      POSTGRES_PASSWORD: qwerty
+      POSTGRES_PASSWORD: 78910
       POSTGRES_DB: order_service
     volumes:
       - ./db-data/order_db_server/:/var/lib/postgresql/data
     ports:
-      - "5433:5432"
+      - "5434:5432"
     deploy:
       mode: replicated
       replicas: 1
